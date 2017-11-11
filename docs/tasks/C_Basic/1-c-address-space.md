@@ -8,7 +8,9 @@
 - 函数内分配的变量，在离开后释放的问题
 - 变量的初始化问题
 
-## 说明C语言的地址空间问题，变量存放的区域
+## 一、C语言的地址空间问题、变量存放的区域
+
+![图1](http://upload-images.jianshu.io/upload_images/6757403-7171f0a9251008e1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 eg1：
 
@@ -35,7 +37,7 @@ eg1：
 		printf("GlobalInit = %p\n",GlobalInit);
 		printf("GlobalNotInit = %p\n",GlobalNotInit);
 		printf("AutoMain = %p\n",AutoMain);
-		printf("MllocPtr = %p\n",MllocPtr);  //打印4种类型变量的地址，在对应到图上
+		printf("MllocPtr = %p\n",MllocPtr);  //打印4种类型变量的地址，在对应到图1
 		
 		printf("%d\n",add(a,b));
 		
@@ -44,7 +46,12 @@ eg1：
 	}
 
 
-## 说明C语言变量的作用域，生存时间
+## 二、C语言变量的作用域、生命周期
+
+![图2](http://upload-images.jianshu.io/upload_images/6757403-e71ed3ba34f4ba14.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+eg2：
 
 	#include <stdio.h>
 	int GlobalInit = 10;  
@@ -60,7 +67,6 @@ eg1：
 	
 		//printf("access AutoMain = %d\n",AutoMain);          //测试能不能访问mian中的自动变量
 		return (a + b);
-		
 	}
 	
 	int main()
@@ -82,7 +88,8 @@ eg1：
 
 !> 留出一个问题：static AutoStatic = 1; //静态变量 存放在地址空间的哪个区域中。
 
-## 说明函数传参（传值，传址）
+## 三、函数传参（传值，传址）
+eg3：
 
 	#include <stdio.h>
 	
@@ -114,7 +121,8 @@ eg1：
 		return 0;
 	}
 
-## 函数内分配的变量，在离开后释放的问题
+## 四、函数内分配的变量，在离开后释放的问题
+eg4：
 
 	#include <stdio.h>
 	
@@ -134,10 +142,13 @@ eg1：
 		printf("array[1]=%d\n",*(ptr+1));    //并不会的到实际效果，应为那片内存已经释放掉了
 	}
 
-## 说明变量的初始化问题，数组可能产生的覆盖问题，在函数中数组使用的一般方法
+## 五、变量的初始化问题，数组可能产生的覆盖问题，在函数中数组使用的一般方法
 
 ?> 对于未初始化的全局变量直接会初始化为0，未静态变量（static）同样会被初始化为0
+
 ?> 自动分配（auto)的变量如果未初始化就是一个随机值。
+
+eg5：
 
 	#include <stdio.h> 
 	int GlobalNotInit;   
@@ -162,33 +173,3 @@ eg1：
 		uninit_var();
 		return 0;
 	}
-
-
-## 第二节：C基本语句以及运算符
-
-## 第三节：C指针基础
-
-## 第四节：结构体对象思想与该思想在编程中的重要性 
-
-
-## 第五节：函数封装、函数编写规则以及函数安全问题
-
-
-## Github使用
-
-
-对于 GitHub，需要掌握 
-
-- 版本控制概念
-- git 基本使用（add, check, commit, push）
-- GitHub 用户注册、仓库建立、本地关联、上传代码
-
-参考链接：
-
-1. [廖雪峰 Git 教程](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
-2. [图解 GitHub 和 SourceTree 入门教程](http://blog.csdn.net/collonn/article/details/39259227)
-3. [GitHub Desktop 使用方法](http://blog.csdn.net/harryptter/article/details/51363473)
-4. [Tower](https://www.git-tower.com/windows/)
-
-
-

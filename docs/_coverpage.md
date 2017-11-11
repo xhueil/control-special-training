@@ -1,13 +1,13 @@
 ![logo](_media/logo@0.7x.png)
 
-# W N C G<small>since 2013</small>
+# X H E I L<small>Since 2007</small>
 
-> Wireless and Networking Communications Group
+> Electric Innovation Laboratory of Xihua University
 
-- wireless signal analysis
-- data mining
-- deep learning
+- control 
+- signal 
+- power 
 
 
-[GitHub](https://github.com/wncg/recruit-assessment)
+[GitHub](https://github.com/xhueil/control-special-training)
 [Get Started](?id=main)

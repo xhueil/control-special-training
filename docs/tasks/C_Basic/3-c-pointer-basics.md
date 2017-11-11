@@ -23,6 +23,7 @@
 - a:变量名、&a代表计算机分配空间的首地址，它实际是将计算机的一个int类型的空间与变量名绑定【&变量名=那片空间的地址】
 - int a = 0x11223344;     见图1
 
+![图1](http://upload-images.jianshu.io/upload_images/6757403-29efdd602e387ceb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ## 一、反映计算机的存储
 eg1：
@@ -65,6 +66,9 @@ eg1：
 	int a = 1;  int *ptr = &a;   
 	ptr 是一个地址 地址的类型 int *
 	*ptr 是一个地址的内容 内容的类型 int    //见图2
+
+![图2](http://upload-images.jianshu.io/upload_images/6757403-65067613879d6daf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 
 eg2：
 
@@ -117,6 +121,8 @@ eg2：
 
 		a[1] ==== *(PtrElem +1);
 		(*PtrAll)[1]  ===== a[1];       //这个应该能理解
+
+![图3](http://upload-images.jianshu.io/upload_images/6757403-df8c4c35f44eec3a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 eg3：
 

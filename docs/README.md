@@ -16,13 +16,75 @@
 
 ## 培训计划
 
-培训计划步骤分为：
+### 1.11周-第一期：C语言基础+51单片机
 
-1. 11周-第一期：C语言基础+51单片机项目
-2. 12周-第二期：硬件PCB设计+扩展项目功能
-3. 13周-第三期：自行开始STM32的学习
-4. 14周-第四期：STM32基础篇+C语言高级
-5. 15周之后-第五期：STM32综合项目
+	时间：11周周五晚6：00
+	地点：8教（具体待定）
+
+- C语言基础
+	- 1.地址空间及相关问题
+	- 2.C基本语句以及运算符
+	- 3.C指针基础
+	- 4.结构体对象思想与该思想在编程中的重要性
+	- 5.函数封装，以及函数编写规则，函数安全问题
+- 51单片机
+	- 1.中断概念
+	- 2.外部中断
+	- 定时器中断
+	- 多功能电子时钟
+		- 4.1定时器+中断实现计时
+		- 4.2数码管显示
+- 原理图及PCB
+	- 讲解原理图
+	- 绘制电子时钟PCB板
+	
+### 2.12周-第二期：硬件PCB设计+扩展项目功能
+
+	时间：待定
+	地点：8教（具体待定）
+
+
+- 扩展电子时钟功能模块
+	- 1.改用时钟芯片（DS1302或DS12C887）
+	- 2.改用LCD1602或LCD12864显示
+	- 3.添加传感器（温度：DS18B20，温湿度：DHT11）
+- PCB及其相关
+	- AD绘制封装
+	- AD改画电子时钟板子
+
+### 3.13周-第三期：自行开始STM32的学习
+
+- STM32
+	- 1.了解学习STM32
+	- 2.构建一个代码模板
+- 参考资料
+
+### 4.14周-第四期：STM32基础+C语言高级
+
+	时间：待定
+	地点：8教（具体待定）
+
+- STM32单片机基础
+	- 1.使用STM32实现流水灯
+	- 2.外部中断+中断向量表
+
+- C语言高级
+	- 3.数据结构
+	- 4.关键字、常用函数
+	- 5.各种指针
+
+- 绘制STM32最小系统
+	- 讲解原理图
+	- 绘制电子时钟PCB板
+
+### 5.15周之后-第五期：STM32综合项目
+
+	时间：待定
+	地点：8教（具体待定）
+
+- 拟定项目
+	- 平衡小车 or 电子秤 or PCB自动腐蚀系统
+	- 若有其他项目到时再确定
 
 ?> 培训专题主要提高**C语言编程能力、编程规范、单片机快速入门、程序调试方法**
 
@@ -37,8 +99,12 @@
 ## 培训说明
 
 - 这次培训只针对于16级的实验室成员
-- 本控制方向专题培训主要由三个人负责：王成、陈木林、李成龙
-- 每组最好一人，还有要参加的找李成龙
+- 本控制方向专题培训主要由三个人负责：
+	- 王成：主要负责C语言
+	- 陈木林：主要负责单片机
+	- 李成龙：主要负责硬件（原理图&&PCB）
+	- 其中会有一些变动，代码调试和维护三人共同进行
+- 每组最好一人，还有要参加的找李成龙登记
 - 说明来培训的目的，然后根据你们的需求可进行变动
 - 所有的代码均需要使用 **[GitHub](https://github.com)** 上传
 - Git 提交信息规范：[GUIDELINE commit](https://neko-dev.github.io/GUIDELINE/#/contribution/commit) - （源自 [Angular](https://github.com/angular/angular.js/blob/master/CONTRIBUTING.md#-git-commit-guidelines)）
@@ -50,8 +116,24 @@
 <br/>
 遇到问题应该优先自己解决，而不是去搜教程
 
+## Github使用
 
-### 关于学习优先级
+github非常重要的一个工具，这次的专题培训，代码全部在github上管理，培训计划也在github上
+
+对于 GitHub，需要掌握 
+
+- 版本控制概念
+- git 基本使用（add, check, commit, push）
+- GitHub 用户注册、仓库建立、本地关联、上传代码
+
+参考链接：
+
+1. [廖雪峰 Git 教程](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
+2. [图解 GitHub 和 SourceTree 入门教程](http://blog.csdn.net/collonn/article/details/39259227)
+3. [GitHub Desktop 使用方法](http://blog.csdn.net/harryptter/article/details/51363473)
+4. [Tower](https://www.git-tower.com/windows/)
+
+## 关于学习优先级
 
 结论：先用限制一定范围内的**广度优先**， 再用限制最大深度的深度优先
 
@@ -59,7 +141,8 @@
 
 相关讨论：[大家学习新东西的时候一般是广度优先还是深度优先](https://www.v2ex.com/t/393618)
 
-### 关于提问方式
+
+## 关于提问方式
 
 核心思想是
 
@@ -78,24 +161,6 @@
 - [提问的正确姿势](https://blog.zthxxx.me/posts/Posture-for-Ask-Questions/)
 - [让你的提问变得更有意义，做一个受欢迎的提问者](https://www.v2ex.com/t/399324)
 - [碰到技术问题时，如何寻求帮助](http://zhangwenli.com/blog/2016/02/19/ask-for-technical-help/)
-
-
-## Github使用
-
-
-对于 GitHub，需要掌握 
-
-- 版本控制概念
-- git 基本使用（add, check, commit, push）
-- GitHub 用户注册、仓库建立、本地关联、上传代码
-
-参考链接：
-
-1. [廖雪峰 Git 教程](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
-2. [图解 GitHub 和 SourceTree 入门教程](http://blog.csdn.net/collonn/article/details/39259227)
-3. [GitHub Desktop 使用方法](http://blog.csdn.net/harryptter/article/details/51363473)
-4. [Tower](https://www.git-tower.com/windows/)
-
 
 
 ## License

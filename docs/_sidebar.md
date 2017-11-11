@@ -1,9 +1,35 @@
 - [总体说明](/?id=main)
 
-- C语言基础和51单片机
-  - [C1](/tasks/c-address-space)
-  - [C2](/tasks/c-basic-statements-and-operators)
-  - [C3](/tasks/c-pointer-basics)
-  - [C4](/tasks/code-embedded)
-  - [C5](/tasks/hardware-embedded)
+- 第一期：C语言基础+51单片机
+  - [地址空间及相关问题](/tasks/C_Basic/1-c-address-space)
+  - [C基本语句以及运算符](/tasks/C_Basic/2-c-basic-statements-operators)
+  - [C指针基础](/tasks/C_Basic/3-c-pointer-basics)
+  - [结构体对象思想](/tasks/C_Basic/4-c-struct-objetc-thinking)
+  - [函数封装、编写规则以及安全问题](/tasks/C_Basic/5-function-encapsulation-security)
+  - [中断概念](/tasks/)
+  - [外部中断](/tasks/)
+  - [定时器及其中断](/tasks/)
+  - [多功能电子时钟项目](/tasks/)
+  - [原理图及PCB绘制](/tasks/)
+ 
+- 第二期：硬件PCB设计+扩展功能模块
+  - [改用时钟芯片](/tasks/)
+  - [改用液晶屏显示](/tasks/)
+  - [添加传感器](/tasks/)
+  - [AD绘制封装](/tasks/)
+  - [AD改画板子](/tasks/)
 
+- 第三期：开始STM32学习+结束上一阶段的小制作
+  - [了解学习STM32](/tasks/)
+  - [构建一个代码模板](/tasks/)
+
+- 第四期：STM32单片机基础+C语言高级（选讲）
+  - [使用STM32实现流水灯](/tasks/)
+  - [外部中断+中断向量表](/tasks/)
+  - [数据结构](/tasks/)
+  - [关键字、常用函数](/tasks/)
+  - [各种指针](/tasks/)
+  - [绘制stm32最小系统](/tasks/)
+  
+  
+ 
