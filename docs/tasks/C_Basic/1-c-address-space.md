@@ -14,7 +14,7 @@
 
 eg1：
 
-```C
+	
 	#include <stdio.h>
 	int GlobalInit = 10;  //以初始化的全局变量
 	int GlobalNotInit;    //未初始化的全局变量
@@ -29,7 +29,7 @@ eg1：
 	
 	int main()
 	{
-		int AutoMain = 0;
+	    int AutoMain = 0;
 		int *MllocPtr;
 		int a=1,b=1;
 		
