@@ -14,6 +14,7 @@
 
 eg1：
 
+	```C
 	#include <stdio.h>
 	int GlobalInit = 10;  //以初始化的全局变量
 	int GlobalNotInit;    //未初始化的全局变量

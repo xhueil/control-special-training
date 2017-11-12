@@ -32,6 +32,12 @@ int main()
 	free(ptr);
 	return 0;
 }
+程序运行结果：
+	GlobalInit = 0x804a01c
+	GlobalNotInit = 0x804a028
+	AutoMain = 0xbff4c900
+	MllocPtr = 0x8201008
+	AutoAdd  = 0xbff4c8dc          //反映了不同类型的变量存放在不同的区域
 
 /*2.eg*/
 /***********说明C语言变量的作用域，生存时间****************/  //画第二张图（有堆栈的那个）
@@ -45,7 +51,7 @@ int add(int a,int b)
 	static AutoStatic = 1; //静态变量               
 	printf("access GlobalInit = %d\n",GlobalInit);
 	printf("access GlobalNotInit = %d\n",GlobalNotInit);  //在函数中访问全局变量
-	printf("access *MllocPtr = %d\n",*MllocPtr);  	      //在函数中访问动态分配的变量
+	//printf("access *MllocPtr = %d\n",*MllocPtr);  	      //在函数中访问动态分配的变量，但是该地址一直有效
 
 	//printf("access AutoMain = %d\n",AutoMain);          //测试能不能访问mian中的自动变量
 	return (a + b);

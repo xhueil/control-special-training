@@ -96,7 +96,7 @@ struct stu {
 	int    number;
 	int    grade ;
 };
-//结构体初始化
+/*结构体初始化*/
 void student_init (struct stu student[],int len) 
 {
 	int i;
@@ -107,7 +107,7 @@ void student_init (struct stu student[],int len)
 		student[i].grade = i * 10;
 	}
 }
-//找到成绩最好的学生，并返回该对象
+/*找到成绩最好的学生，并返回该对象*/
 struct stu*  find_best_grade(struct stu student[],int len)         //由于使用的是结构体数组，所有要传入数组长度
 {
 	int i;

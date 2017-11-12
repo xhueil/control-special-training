@@ -79,7 +79,6 @@ int main()
 	几个等价表达式：
 		a[1] = *(PtrElem +1);
 		(*PtrAll)[1]  = a[1];       //这个应该能理解
-		
 #include <stdio.h>
   
 int main()
