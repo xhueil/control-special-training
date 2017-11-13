@@ -1,7 +1,7 @@
-# 第三节：函数封装、编写规则以及安全问题
+# 第五节：函数封装、编写规则以及安全问题
 
 **本节知识点**
- 
+
 - 编写函数名以及参数的规则
 - 在函数中使用数组（边界检查）
 - 函数添加合适的打印信息与函数中的错误处理
@@ -9,18 +9,19 @@
 
 **编写函数最基本原则：**
 
-- 1.函数名必须体现函数功能
-- 2.函数参数要提示调用的时候如何传入值
-- 3.返回值最好要进行说明（一定不能使用拼音）
+1.函数名必须体现函数功能
+2.函数参数要提示调用的时候如何传入值
+3.返回值最好要进行说明（一定不能使用拼音）
 
 ## 一、函数中数组越界
 
 ?>在函数中使用数组时，越界情况，体现边界检查的重要性
-?>该函数实现字符串拷贝功能
+<br>
+该函数实现字符串拷贝功能
 
 eg1：
 
-```C
+```c
 #include <stdio.h>
 #include <string.h>
 
@@ -28,31 +29,31 @@ eg1：
 
 int str_copy(char const *StrOrig , char *StrDest,int size)   
 {
-	int ret = 0;                               //返回以写入的字节数
-	int len = strlen(StrOrig);        //注意不包含'\0'的那个字节
+    int ret = 0;                     //返回以写入的字节数
+    int len = strlen(StrOrig);       //注意不包含'\0'的那个字节
 
-#if  CHEAK_BARRAY_OUT                      //边界检查
-	if(len >  size - 1)	                      
-		ret = size - 1;
-	else
-		ret = len;
+#if  CHEAK_BARRAY_OUT                //边界检查
+    if(len >  size - 1)                          
+        ret = size - 1;
+    else
+        ret = len;
 #else
-	ret = len;
+    ret = len;
 #endif
-	strncpy(StrDest,StrOrig,ret);    //对于这个函数还要进行错误检查的，这里暂时不进行
-	return ret;
+    strncpy(StrDest,StrOrig,ret);    //对于这个函数还要进行错误检查的，这里暂时不进行
+    return ret;
 }
 
 int main()
 {
-	int ret;
-	char StrOrig[]={"hallo world"};
-	char StrDest[5];          //注意只有5个字节
-	ret = str_copy(StrOrig,StrDest,5) ;
+    int ret;
+    char StrOrig[]={"hallo world"};
+    char StrDest[5];          //注意只有5个字节
+    ret = str_copy(StrOrig,StrDest,5) ;
 
-	printf("ret = %d\n",ret);
-	printf("orignal str =%s\n",StrOrig);
-	printf("desterminal str =%s\n",StrDest);
+    printf("ret = %d\n",ret);
+    printf("orignal str =%s\n",StrOrig);
+    printf("desterminal str =%s\n",StrDest);
 }
 ```
 
@@ -65,11 +66,15 @@ int main()
 
 如： 在编写一个刷卡模块时（就是进门时：刷卡按密码那个）我们就可以给它定义几个状态。
 
-	1获取到卡号  -----  get CardId  
-	2获取到用户的卡号与密码  ----- get CardId + Password   
-	3获取到卡号后，未输入密码被再次刷卡 ----- new card is arrived  
-	4获取到卡号后输入密码时间超过最大输入时间  ----- get CardId + Password timeout 
-	5空闲    ----- 5waitting 
+|  序号  | 描述                   | 状态                            |
+| :--: | :------------------- | :---------------------------- |
+|  1   | 获取到卡号                | get CardId                    |
+|  2   | 获取到用户的卡号与密码          | get CardId + Password         |
+|  3   | 获取到卡号后，未输入密码被再次刷卡    | new card is arrived           |
+|  4   | 获取到卡号后输入密码时间超过最大输入时间 | get CardId + Password timeout |
+|  5   | 空闲                   | waitting                      |
+
+
 
 这样做的好处就是实时跟踪代码的执行情况，更容易发现代码中的问题。
 
@@ -90,16 +95,12 @@ int main()
 
 函数的层次感解释：
 
-	如一本书：
-	章节体现本书的主体框架
-	章节下的子目录进行知识点的讲解
-	子目录下的子目录进行知识点的更细致讲解 （就这样一层一层的）
+    如一本书：
+    章节体现本书的主体框架
+    章节下的子目录进行知识点的讲解
+    子目录下的子目录进行知识点的更细致讲解 （就这样一层一层的）
 
 可以举个例子（就通过飞控程序）
 
 
 ## 四、中断服务函数
-
-
-
-

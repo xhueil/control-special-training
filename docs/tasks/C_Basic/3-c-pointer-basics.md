@@ -17,38 +17,38 @@
 
 - 变量类型决定了计算机的存储方式与访问方式。
 
-```C	
-		int a；     //a 是变量名  int是类型
+```c    
+int a；     //a 是变量名  int是类型
 ```
-	
-- int 我们都知道占4个字节，它实际代表计算机按int方式分配空间（分配4字节的空间），按int方式访问（将这4个字节作为一个整体去访问）
-- a:变量名、&a代表计算机分配空间的首地址，它实际是将计算机的一个int类型的空间与变量名绑定【&变量名=那片空间的地址】
-- int a = 0x11223344;     见图1
+    
+- `int` 类型我们都知道占 4 个字节，它实际代表计算机按int方式分配空间（分配4字节的空间），按 `int` 方式访问（将这4个字节作为一个整体去访问）
+- `a` 变量名，`&a` 代表计算机分配空间的首地址，它实际是将计算机的一个 `int` 类型的空间与变量名绑定，即：`&变量名=那片空间的地址`
+- `int a = 0x11223344;`     见如下图1
 
 ![图1](http://upload-images.jianshu.io/upload_images/6757403-29efdd602e387ceb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ## 一、反映计算机的存储
 eg1：
 
-```C	
+```c
 #include <stdio.h>
 
 int main()
 {
-	int a = 0x11223344;
-	char *ptr = (char *)&a;
+    int a = 0x11223344;
+    char *ptr = (char *)&a;
 
-	printf("%0x \n",*ptr);
-	printf("%0x \n",*(ptr+1));
-	printf("%0x \n",*(ptr+2));
-	printf("%0x \n",*(ptr+3)); //将整形变量按字节的方式进行访问
+    printf("%0x \n",*ptr);
+    printf("%0x \n",*(ptr+1));
+    printf("%0x \n",*(ptr+2));
+    printf("%0x \n",*(ptr+3)); //将整形变量按字节的方式进行访问
 
-	printf("%p \n",&a);
-	printf("%p \n",ptr+1);
-	printf("%p \n",ptr+2);
-	printf("%p \n",ptr+3);   //看下地址的关系
+    printf("%p \n",&a);
+    printf("%p \n",ptr+1);
+    printf("%p \n",ptr+2);
+    printf("%p \n",ptr+3);   //看下地址的关系
 
-	printf("%d \n",sizeof(a)); //打印该类型的空间
+    printf("%d \n",sizeof(a)); //打印该类型的空间
 }
 ```
 
@@ -57,38 +57,41 @@ int main()
 ## 二、变量名与指针的关系
 
 - 对于指针，明确操作的是地址和还是操作地址所指向的值
-	- 操作地址时：明确该地址的类型，类型决定了移动的单位，然后进行移动
-	- 操作地址所指向的值：就当成变量操作
+    - 操作地址时：明确该地址的类型，类型决定了移动的单位，然后进行移动
+    - 操作地址所指向的值：就当成变量操作
 - 两个术语与两个术语之间的关系
-	- 指针的类型          -----      地址的类型    
-	- 指针指向对象的类型  -----      地址上变量的类型
-	- 指针的类型 + * = 指针指向对象的类型
-	- 指针的类型  = 指针指向对象的类型 +&
+    - 指针的类型          -----      地址的类型    
+    - 指针指向对象的类型  -----      地址上变量的类型
+    - 指针的类型 + * = 指针指向对象的类型
+    - 指针的类型  = 指针指向对象的类型 +&
 
-如：  
-	
-	int a = 1;  int *ptr = &a;   
-	ptr 是一个地址 地址的类型 int *
-	*ptr 是一个地址的内容 内容的类型 int    //见图2
+如：
+
+```c
+int a = 1;  
+int *ptr = &a;   
+// ptr 是一个地址 地址的类型 int *
+// *ptr 是一个地址的内容 内容的类型 int
+```
 
 ![图2](http://upload-images.jianshu.io/upload_images/6757403-65067613879d6daf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
 eg2：
 
-```C
+```c
 #include <stdio.h>
 
 int main()
 {
-	int a = 1;
-	int *ptr = &a;
+    int a = 1;
+    int *ptr = &a;
 
-	printf("%d \n",a);
-	printf("%d \n",*ptr);  //打印出来的值相等
+    printf("%d \n",a);
+    printf("%d \n",*ptr);  //打印出来的值相等
 
-	printf("%p \n",&a);
-	printf("%p \n",ptr);   //打印出来的地址相等
+    printf("%p \n",&a);
+    printf("%p \n",ptr);   //打印出来的地址相等
 }
 ```
 
@@ -96,44 +99,47 @@ int main()
 
 如：
 
-```C
-int a[10];                //计算机开辟了10个int型的地址空间，a就是地址空间的首地址
-printf("%d \n",sizeof(a));//结果为 40 = 10 * 4
-int (*PtrAll)[] =  a;     //PtrAll是一个地址，该地址指向整个数组空间
+```c
+int a[10];                 //计算机开辟了10个int型的地址空间，a就是地址空间的首地址
+printf("%d \n",sizeof(a)); //结果为 40 = 10 * 4
+int (*PtrAll)[] =  a;      //PtrAll是一个地址，该地址指向整个数组空间
 PtrAll++;         //该地址移动 40 个字节（也就是整个数组的空间 -- int *[]）
 
-int *PtrElem = &a[0];     //PtrElem是一个地址，该地址指向数组首元素的空间
-printf("%d \n",sizeof(a));//结果为 4
+int *PtrElem = &a[0];      //PtrElem是一个地址，该地址指向数组首元素的空间
+printf("%d \n",sizeof(a)); //结果为 4
 PtrElem ++;    //该地址移动4个字节    （也就是移动数组中一个元素的空间 ---int）   //见图三
-```	
+```    
+
 几个等价表达式：
 
-		a[1] ==== *(PtrElem +1);
-		(*PtrAll)[1]  ===== a[1];       //这个应该能理解
+```c
+a[1] ==== *(PtrElem +1);
+(*PtrAll)[1]  ===== a[1];
+```
 
 ![图3](http://upload-images.jianshu.io/upload_images/6757403-df8c4c35f44eec3a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 eg3：
 
-```C
+```c
 #include <stdio.h>
 
 int main()
 {
-	int a[10]={1,2,3,4,5,6,7,8,9,10};  
-	int *PtrElem = &a[0]; //初始化指向数组元素的指针
-	int (*PtrAll)[10] = a;       //初始化指向数组的指针  
+    int a[10]={1,2,3,4,5,6,7,8,9,10};  
+    int *PtrElem = &a[0]; //初始化指向数组元素的指针
+    int (*PtrAll)[10] = a;       //初始化指向数组的指针  
 
-	/**针对数组指针操作*/
-	printf("addr a= %p \n",a);
-	printf("%d \n",sizeof(a));
-	printf("addr PtrAll= %p \n",PtrAll);
-	printf("addr PtrAll+1= %p \n",PtrAll+1);         //地址偏移了40个字节
+    /**针对数组指针操作*/
+    printf("addr a= %p \n",a);
+    printf("%d \n",sizeof(a));
+    printf("addr PtrAll= %p \n",PtrAll);
+    printf("addr PtrAll+1= %p \n",PtrAll+1);         //地址偏移了40个字节
 
-	/**针对指向数组元素的指针*/
-	printf("addr a[0]= %p \n",&a[0]);
-	printf("addr PtrElem= %p \n",PtrElem);
-	printf("addr PtrElem+1= %p \n",PtrElem+1);    //地址偏移了4个字节
+    /**针对指向数组元素的指针*/
+    printf("addr a[0]= %p \n",&a[0]);
+    printf("addr PtrElem= %p \n",PtrElem);
+    printf("addr PtrElem+1= %p \n",PtrElem+1);    //地址偏移了4个字节
 }
 ```
 
@@ -141,21 +147,21 @@ int main()
 
 eg4:
 
-```C
+```c
 #include <stdio.h>
 
 void Array_parm(int a[])
 {
-	int i;
-	for(i=0;i<10;i++)
-		printf("%d \n",a[i]);
-	printf("%d \n",sizeof(a));  //会发现结果是4，而不是40，这就是体现被弱化的地方，所有一般还要传递参数 数组长度；
+    int i;
+    for(i=0;i<10;i++)
+        printf("%d \n",a[i]);
+    printf("%d \n",sizeof(a));  //会发现结果是4，而不是40，这就是体现被弱化的地方，所有一般还要传递参数 数组长度；
 }
 int main()
 {
-	int a[10]={1,2,3,4,5,6,7,8,9,10};  
-	Array_parm(a);
-		return 0;
+    int a[10]={1,2,3,4,5,6,7,8,9,10};  
+    Array_parm(a);
+    return 0;
 }
 ```
 
