@@ -68,24 +68,24 @@ int main()
 
 eg2：
 
-​```C
+```C
 #include <stdio.h>
 
 int find_a(char * str)
 {
-	int count = 0;//必须要初始化才行
-		while(*str != '\0')
-		{
-			if(isalpha(*str))         //大条件，判断是否是字母
-			{
-				if(*str == 'a')
-					count++;
-				if(*str == 's')//遇到s提前退出循环        
-					break; 
-			}
-			str++;
-		}
-	return count;
+  int count = 0;//必须要初始化才行
+  while(*str != '\0')
+  {
+	if(isalpha(*str))         //大条件，判断是否是字母
+	{
+		if(*str == 'a')
+			count++;
+		if(*str == 's')//遇到s提前退出循环        
+			break; 
+	}
+	str++;
+  }
+  return count;
 }
 int main()
 {
