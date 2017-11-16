@@ -7,7 +7,7 @@
   - [C指针基础](/tasks/C_Basic/3-c-pointer-basics)
   - [结构体对象思想](/tasks/C_Basic/4-c-struct-objetc-thinking)
   - [函数封装、编写规则以及安全问题](/tasks/C_Basic/5-function-encapsulation-security)
-  - [中断概念](/tasks/51-Microcomputer-Project/1-interrupt-concept)
+  - [中断概念](/tasks/51_Microcomputer_Project/1-interrupt-concept)
   - [外部中断](/tasks/)
   - [定时器及其中断](/tasks/)
   - [多功能电子时钟项目](/tasks/)
