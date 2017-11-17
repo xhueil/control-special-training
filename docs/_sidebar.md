@@ -10,7 +10,7 @@
   - [中断概念](/tasks/51_Microcomputer_Project/1-interrupt-concept)
   - [外部中断](/tasks/51_Microcomputer_Project/2-external-interrupt)
   - [定时器及其中断](/tasks/51_Microcomputer_Project/3-timer-interrupt)
-  - [多功能电子时钟项目](/tasks/)
+  - [多功能电子时钟项目](/tasks/51_Microcomputer_Project/4-multifunction-electronic-clock)
   - [原理图及PCB绘制](/tasks/)
  
 - 第二期：硬件PCB设计+扩展功能模块
