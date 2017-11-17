@@ -8,7 +8,7 @@
   - [结构体对象思想](/tasks/C_Basic/4-c-struct-objetc-thinking)
   - [函数封装、编写规则以及安全问题](/tasks/C_Basic/5-function-encapsulation-security)
   - [中断概念](/tasks/51-Microcomputer-Project/1-interrupt-concept)
-  - [外部中断](/tasks/)
+  - [外部中断](/tasks/51-Microcomputer-Project/2-external-interrupt)
   - [定时器及其中断](/tasks/)
   - [多功能电子时钟项目](/tasks/)
   - [原理图及PCB绘制](/tasks/)
