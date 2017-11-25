@@ -1,0 +1,25 @@
+C51 COMPILER V9.01   TIMER                                                                 11/25/2017 13:49:13 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE TIMER
+OBJECT MODULE PLACED IN ..\Output\timer.obj
+COMPILER INVOKED BY: D:\Keil_v4\C51\BIN\C51.EXE ..\User\timer\timer.c BROWSE INCDIR(..\User;..\User\timer;..\User\uart;.
+                    -.\Hardware\digital_tube;..\Hardware\ds1302;..\Hardware\key_board;..\Hardware\lcd1602;..\Library\delay) DEBUG OBJECTEXTEN
+                    -D PRINT(..\Listing\timer.lst) OBJECT(..\Output\timer.obj)
+
+line level    source
+
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =   ----    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

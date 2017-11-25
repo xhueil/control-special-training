@@ -1,0 +1,10 @@
+"..\Output\main.obj",
+"..\Output\uart.obj",
+"..\Output\timer.obj",
+"..\Output\delay.obj",
+"..\Output\digital_tube.obj",
+"..\Output\ds1302.obj",
+"..\Output\key_board.obj",
+"..\Output\lcd1602.obj" 
+TO "..\Output\Template" Rtx51Tiny 
+PRINT("..\Listing\Template.m51") RAMSIZE(256) 

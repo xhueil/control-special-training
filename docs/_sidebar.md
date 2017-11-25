@@ -14,9 +14,12 @@
   - [原理图及PCB绘制](/tasks/)
  
 - 第二期：硬件PCB设计+扩展功能模块
-  - [改用时钟芯片](/tasks/)
-  - [改用液晶屏显示](/tasks/)
-  - [添加传感器](/tasks/)
+  - [改为DS1302时钟芯片计时](/tasks/Extend_Project_Function/1-change-ds1302-clock-chip)
+  - [添加传感器模块](/tasks/Extend_Project_Function/2-add-sensor-module)
+  - [替换显示屏显示信息](/tasks/Extend_Project_Function/3-replace-display-module)
+  - [51单片机RTX51操作系统使用](/tasks/Extend_Project_Function/4-add-operating-system)
+  - [标准建立工程的步骤](/tasks/Extend_Project_Function/5-standard-create-project)
+  - [C语言规范编程](/tasks/Extend_Project_Function/6-canonical-programming)
   - [AD绘制封装](/tasks/)
   - [AD改画板子](/tasks/)
 
